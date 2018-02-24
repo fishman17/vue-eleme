@@ -11,10 +11,10 @@
     </div>
     <div class="foods-wrapper" ref="foodsWrapper">
       <ul>
-        <li v-for="item in goods" class="food-list">
+        <li v-for="item in goods" class="food-list" :key="item.id">
           <h1 class="title">{{item.name}}</h1>
           <ul>
-            <li v-for="food in item.foods" class="food-item">
+            <li v-for="food in item.foods" class="food-item" :key="food.id">
               <div class="icon">
                 <img :src="food.icon" alt="" width="57px" height="57px">
               </div>
@@ -223,9 +223,5 @@ export default {
           position: absolute;
           right: 0;
           bottom: 12px;
-        
-      
-    
-  
 
 </style>
